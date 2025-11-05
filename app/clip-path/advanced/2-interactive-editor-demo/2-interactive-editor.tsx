@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DemoBlock } from "@/components/demo-block";
 
 export function InteractiveEditorDemo() {
   const [clipType, setClipType] = useState<"circle" | "polygon" | "ellipse" | "inset">("circle");
@@ -30,13 +31,32 @@ export function InteractiveEditorDemo() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
-      <div className="max-w-6xl w-full space-y-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Interactive Clip-Path Editor</h2>
-        
+    <div className="max-w-6xl mx-auto space-y-8">
+      <h2 className="text-3xl font-bold mb-8">Interactive Clip-Path Editor</h2>
+
+      <DemoBlock
+        title="Interactive Editor"
+        code={`const [clipType, setClipType] = useState("circle");
+const [circleRadius, setCircleRadius] = useState(40);
+const [circleX, setCircleX] = useState(50);
+const [circleY, setCircleY] = useState(50);
+
+const getClipPath = () => {
+  switch (clipType) {
+    case "circle":
+      return \`circle(\${circleRadius}% at \${circleX}% \${circleY}%)\`;
+    // ... other cases
+  }
+};
+
+<div
+  className="w-full h-96 bg-gradient-to-br from-blue-400 to-purple-500"
+  style={{ clipPath: getClipPath() }}
+/>`}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Controls */}
-          <div className="bg-white p-6 rounded-lg shadow-lg space-y-6">
+          <div className="space-y-6">
             <div>
               <label className="block text-sm font-semibold mb-2">Clip Type</label>
               <select
@@ -165,14 +185,13 @@ export function InteractiveEditorDemo() {
               </div>
             )}
 
-            <div className="bg-gray-100 p-4 rounded">
+            <div className="bg-muted p-4 rounded">
               <code className="text-sm break-all">{`clip-path: ${getClipPath()};`}</code>
             </div>
           </div>
 
           {/* Preview */}
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4">Preview</h3>
+          <div className="flex items-center">
             <div
               className="w-full h-96 bg-gradient-to-br from-blue-400 to-purple-500 transition-all duration-300"
               style={{
@@ -181,7 +200,7 @@ export function InteractiveEditorDemo() {
             />
           </div>
         </div>
-      </div>
+      </DemoBlock>
     </div>
   );
 }

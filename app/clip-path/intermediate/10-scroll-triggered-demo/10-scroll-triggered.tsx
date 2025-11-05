@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { DemoBlock } from "@/components/demo-block";
 
 export function ScrollTriggeredDemo() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -23,17 +24,28 @@ export function ScrollTriggeredDemo() {
   const polygonProgress = scrollProgress * 100;
 
   return (
-    <div className="min-h-[200vh] p-8 bg-white">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <h2 className="text-3xl font-bold text-center mb-8 sticky top-8 bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg z-10">
+    <div className="min-h-[200vh]">
+      <div className="max-w-6xl mx-auto space-y-8">
+        <h2 className="text-3xl font-bold mb-8 sticky top-8 bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg z-10">
           Scroll-Based Clip-Path Reveal
         </h2>
-        
+
         <div className="space-y-32">
           {/* Example 1: Circle expansion */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Circle Expansion</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+          <DemoBlock
+            title="Circle Expansion"
+            code={`const circleSize = 30 + scrollProgress * 70;
+
+<div
+  className="w-full h-64 bg-gradient-to-br from-purple-400 to-pink-500 transition-all duration-300"
+  style={{
+    clipPath: \`circle(\${circleSize}% at 50% 50%)\`
+  }}
+/>
+
+/* Circle expands as you scroll down */`}
+          >
+            <div className="flex justify-center">
               <div
                 className="w-full h-64 bg-gradient-to-br from-purple-400 to-pink-500 transition-all duration-300"
                 style={{
@@ -41,12 +53,23 @@ export function ScrollTriggeredDemo() {
                 }}
               />
             </div>
-          </div>
+          </DemoBlock>
 
           {/* Example 2: Polygon reveal */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Polygon Reveal</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+          <DemoBlock
+            title="Polygon Reveal"
+            code={`const polygonProgress = scrollProgress * 100;
+
+<div
+  className="w-full h-64 bg-gradient-to-br from-blue-400 to-cyan-500 transition-all duration-300"
+  style={{
+    clipPath: \`polygon(0% 0%, \${polygonProgress}% 0%, \${polygonProgress}% 100%, 0% 100%)\`
+  }}
+/>
+
+/* Left-to-right wipe reveal */`}
+          >
+            <div className="flex justify-center">
               <div
                 className="w-full h-64 bg-gradient-to-br from-blue-400 to-cyan-500 transition-all duration-300"
                 style={{
@@ -54,12 +77,21 @@ export function ScrollTriggeredDemo() {
                 }}
               />
             </div>
-          </div>
+          </DemoBlock>
 
           {/* Example 3: Diagonal reveal */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Diagonal Reveal</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+          <DemoBlock
+            title="Diagonal Reveal"
+            code={`<div
+  className="w-full h-64 bg-gradient-to-br from-green-400 to-emerald-500 transition-all duration-300"
+  style={{
+    clipPath: \`polygon(0% 0%, \${polygonProgress}% \${polygonProgress * 0.5}%, \${polygonProgress * 0.5}% \${polygonProgress}%, 0% 100%)\`
+  }}
+/>
+
+/* Diagonal wipe reveal */`}
+          >
+            <div className="flex justify-center">
               <div
                 className="w-full h-64 bg-gradient-to-br from-green-400 to-emerald-500 transition-all duration-300"
                 style={{
@@ -67,12 +99,21 @@ export function ScrollTriggeredDemo() {
                 }}
               />
             </div>
-          </div>
+          </DemoBlock>
 
           {/* Example 4: Inset reveal */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Inset Reveal</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
+          <DemoBlock
+            title="Inset Reveal"
+            code={`<div
+  className="w-full h-64 bg-gradient-to-br from-orange-400 to-red-500 transition-all duration-300"
+  style={{
+    clipPath: \`inset(\${100 - polygonProgress * 0.5}% \${100 - polygonProgress * 0.5}% \${100 - polygonProgress * 0.5}% \${100 - polygonProgress * 0.5}%)\`
+  }}
+/>
+
+/* Inset shrinks from all sides */`}
+          >
+            <div className="flex justify-center">
               <div
                 className="w-full h-64 bg-gradient-to-br from-orange-400 to-red-500 transition-all duration-300"
                 style={{
@@ -80,16 +121,7 @@ export function ScrollTriggeredDemo() {
                 }}
               />
             </div>
-          </div>
-        </div>
-
-        <div className="mt-16 bg-white p-6 rounded-lg shadow-lg sticky bottom-8">
-          <h3 className="text-xl font-semibold mb-4">Code Example</h3>
-          <pre className="bg-gray-100 p-4 rounded overflow-x-auto">
-            <code>{`/* Use scroll position to update clip-path */
-const progress = scrollY / (docHeight - windowHeight);
-element.style.clipPath = \`circle(\${progress * 100}% at 50% 50%)\`;`}</code>
-          </pre>
+          </DemoBlock>
         </div>
       </div>
     </div>
