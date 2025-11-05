@@ -12,17 +12,31 @@ export function HoverRevealDemo() {
           clip-path: circle(150% at 50% 50%);
         }
         .top-reveal {
-          clip-path: inset(100% 0% 0% 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
           transition: clip-path 0.3s ease-out;
         }
         .group:hover .top-reveal {
-          clip-path: inset(0% 0% 0% 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
-        .diagonal-reveal {
+        .horizontal-reveal {
           clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
           transition: clip-path 0.3s ease-out;
         }
+        .group:hover .horizontal-reveal {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        .diagonal-reveal {
+          clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+          transition: clip-path 0.3s ease-out;
+        }
         .group:hover .diagonal-reveal {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        .diagonal-reveal-2 {
+          clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%);
+          transition: clip-path 0.3s ease-out;
+        }
+        .group:hover .diagonal-reveal-2 {
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
         .ellipse-reveal {
@@ -33,7 +47,7 @@ export function HoverRevealDemo() {
           clip-path: ellipse(100% 100% at 50% 50%);
         }
       `}} />
-      <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-br from-rose-50 to-pink-50">
+      <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
         <div className="max-w-4xl w-full space-y-8">
           <h2 className="text-3xl font-bold text-center mb-8">Hover Reveal Effect</h2>
           
@@ -60,24 +74,46 @@ export function HoverRevealDemo() {
               </div>
             </div>
 
-            {/* Example 3: Diagonal reveal */}
+            {/* Example 3: Horizontal reveal */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Diagonal Reveal</h3>
+              <h3 className="text-xl font-semibold">Horizontal Reveal</h3>
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="group relative w-full h-64 overflow-hidden rounded-lg cursor-pointer">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-amber-500 diagonal-reveal" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-amber-500 horizontal-reveal" />
                 </div>
               </div>
             </div>
 
-            {/* Example 4: Ellipse reveal */}
+            {/* Example 4: Diagonal reveal (top-left to bottom-right) */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Diagonal Reveal</h3>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="group relative w-full h-64 overflow-hidden rounded-lg cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-400 to-purple-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-400 to-pink-500 diagonal-reveal" />
+                </div>
+              </div>
+            </div>
+
+            {/* Example 5: Diagonal reveal 2 (top-right to bottom-left) */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Diagonal Reveal 2</h3>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <div className="group relative w-full h-64 overflow-hidden rounded-lg cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-blue-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-rose-400 to-pink-500 diagonal-reveal-2" />
+                </div>
+              </div>
+            </div>
+
+            {/* Example 6: Ellipse reveal */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Ellipse Reveal</h3>
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="group relative w-full h-64 overflow-hidden rounded-lg cursor-pointer">
-                  <div className="absolute inset-0 bg-gradient-to-br from-violet-400 to-purple-500" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-400 to-pink-500 ellipse-reveal" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 ellipse-reveal" />
                 </div>
               </div>
             </div>
@@ -102,4 +138,3 @@ export function HoverRevealDemo() {
     </>
   );
 }
-

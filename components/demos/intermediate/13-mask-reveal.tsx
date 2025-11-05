@@ -6,7 +6,7 @@ export function MaskRevealDemo() {
   const [revealProgress, setRevealProgress] = useState(0);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-br from-indigo-50 to-blue-50">
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
       <div className="max-w-4xl w-full space-y-8">
         <h2 className="text-3xl font-bold text-center mb-8">Mask Reveal Effect</h2>
         

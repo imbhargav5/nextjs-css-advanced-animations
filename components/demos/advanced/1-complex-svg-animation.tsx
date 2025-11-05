@@ -18,7 +18,7 @@ export function ComplexSvgAnimationDemo() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
       <div className="max-w-4xl w-full space-y-8">
         <h2 className="text-3xl font-bold text-center mb-8">Complex SVG Path Animation</h2>
         

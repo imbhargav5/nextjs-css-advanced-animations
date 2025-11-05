@@ -12,7 +12,7 @@ export function ParallaxClippingDemo() {
   }, []);
 
   return (
-    <div className="min-h-[200vh] p-8 bg-gradient-to-br from-violet-50 to-purple-50">
+    <div className="min-h-[200vh] p-8 bg-white">
       <div className="max-w-4xl mx-auto space-y-32">
         <div className="sticky top-8 bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg z-10">
           <h2 className="text-3xl font-bold text-center">Parallax Clipping</h2>

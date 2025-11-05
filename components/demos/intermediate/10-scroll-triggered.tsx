@@ -23,7 +23,7 @@ export function ScrollTriggeredDemo() {
   const polygonProgress = scrollProgress * 100;
 
   return (
-    <div className="min-h-[200vh] p-8 bg-gradient-to-br from-teal-50 to-green-50">
+    <div className="min-h-[200vh] p-8 bg-white">
       <div className="max-w-4xl mx-auto space-y-8">
         <h2 className="text-3xl font-bold text-center mb-8 sticky top-8 bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-lg z-10">
           Scroll-Based Clip-Path Reveal
