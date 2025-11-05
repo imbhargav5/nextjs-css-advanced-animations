@@ -1,79 +1,47 @@
 import Link from "next/link";
 
+const sections = [
+  {
+    name: "Clip-Path",
+    href: "/clip-path",
+    description: "Explore CSS clip-path examples from basic shapes to advanced animations",
+    icon: "✂️",
+  },
+  // Add more sections here in the future
+];
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 to-gray-100">
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-16 px-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Clip-Path Examples Showcase
+            CSS Examples Showcase
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Explore 40 diverse examples of CSS clip-path, from basic shapes to advanced animations and interactions.
+            Explore diverse CSS techniques and examples organized by category.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-          {/* Basic Examples */}
-          <Link
-            href="/basic/index"
-            className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-blue-200 hover:border-blue-400"
-          >
-            <div className="text-center">
-              <div className="text-6xl font-bold text-blue-600 mb-4 group-hover:scale-110 transition-transform">
-                10
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
+          {sections.map((section) => (
+            <Link
+              key={section.name}
+              href={section.href}
+              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-blue-400"
+            >
+              <div className="text-center">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                  {section.icon}
+                </div>
+                <h2 className="text-2xl font-semibold mb-2 text-gray-800">{section.name}</h2>
+                <p className="text-gray-600 mb-4">{section.description}</p>
+                <div className="text-blue-600 font-semibold group-hover:underline">
+                  View Section →
+                </div>
               </div>
-              <h2 className="text-2xl font-semibold mb-2 text-gray-800">Basic Examples</h2>
-              <p className="text-gray-600 mb-4">
-                Learn the fundamentals of clip-path with circles, polygons, and basic shapes.
-              </p>
-              <div className="text-blue-600 font-semibold group-hover:underline">
-                View Examples →
-              </div>
-            </div>
-          </Link>
-
-          {/* Intermediate Examples */}
-          <Link
-            href="/intermediate/index"
-            className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-purple-200 hover:border-purple-400"
-          >
-            <div className="text-center">
-              <div className="text-6xl font-bold text-purple-600 mb-4 group-hover:scale-110 transition-transform">
-                15
-              </div>
-              <h2 className="text-2xl font-semibold mb-2 text-gray-800">Intermediate Examples</h2>
-              <p className="text-gray-600 mb-4">
-                Explore animations, interactions, and more complex clip-path techniques.
-              </p>
-              <div className="text-purple-600 font-semibold group-hover:underline">
-                View Examples →
-              </div>
-            </div>
-          </Link>
-
-          {/* Advanced Examples */}
-          <Link
-            href="/advanced/index"
-            className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-orange-200 hover:border-orange-400"
-          >
-            <div className="text-center">
-              <div className="text-6xl font-bold text-orange-600 mb-4 group-hover:scale-110 transition-transform">
-                15
-              </div>
-              <h2 className="text-2xl font-semibold mb-2 text-gray-800">Advanced Examples</h2>
-              <p className="text-gray-600 mb-4">
-                Master complex animations, 3D effects, and cutting-edge clip-path techniques.
-              </p>
-              <div className="text-orange-600 font-semibold group-hover:underline">
-                View Examples →
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="mt-12 text-center text-gray-500">
-          <p>Total: 40 examples covering all aspects of CSS clip-path</p>
+            </Link>
+          ))}
         </div>
       </main>
     </div>

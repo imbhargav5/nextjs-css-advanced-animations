@@ -33,7 +33,7 @@ export function DemoPageLayout({
   demoNumber,
 }: DemoPageLayoutProps) {
   const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
-  const categoryPath = `/${category}`;
+  const categoryPath = `/clip-path/${category}`;
 
   return (
     <SidebarProvider defaultOpen={false}>
