@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function ComplexTransitionsDemo() {
   const [step, setStep] = useState(0);
@@ -20,12 +21,9 @@ export function ComplexTransitionsDemo() {
         <h2 className="text-3xl font-bold text-center mb-8">Complex Transition Sequences</h2>
         
         <div className="flex justify-center mb-8">
-          <button
-            onClick={() => setStep((s) => (s + 1) % transitions.length)}
-            className="px-6 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors"
-          >
+          <Button onClick={() => setStep((s) => (s + 1) % transitions.length)}>
             Next Step ({step + 1}/{transitions.length})
-          </button>
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function ShapeMorphingDemo() {
   const [morphState, setMorphState] = useState(0);
@@ -22,17 +23,13 @@ export function ShapeMorphingDemo() {
         
         <div className="flex justify-center gap-4 mb-8 flex-wrap">
           {shapes.map((_, index) => (
-            <button
+            <Button
               key={index}
               onClick={() => setMorphState(index)}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                morphState === index
-                  ? "bg-orange-600 text-white"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}
+              variant={morphState === index ? "secondary" : "outline"}
             >
               Shape {index + 1}
-            </button>
+            </Button>
           ))}
         </div>
 

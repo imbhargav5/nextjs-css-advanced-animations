@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function ComplexSvgAnimationDemo() {
   const [progress, setProgress] = useState(0);
@@ -23,7 +24,7 @@ export function ComplexSvgAnimationDemo() {
         <h2 className="text-3xl font-bold text-center mb-8">Complex SVG Path Animation</h2>
         
         <div className="flex justify-center mb-8 gap-4 items-center">
-          <button
+          <Button
             onClick={() => {
               let p = 0;
               const interval = setInterval(() => {
@@ -35,10 +36,9 @@ export function ComplexSvgAnimationDemo() {
               }, 16);
               return () => clearInterval(interval);
             }}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Animate
-          </button>
+          </Button>
           <input
             type="range"
             min="0"

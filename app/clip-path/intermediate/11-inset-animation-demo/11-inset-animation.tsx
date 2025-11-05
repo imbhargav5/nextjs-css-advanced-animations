@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function InsetAnimationDemo() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -11,12 +12,9 @@ export function InsetAnimationDemo() {
         <h2 className="text-3xl font-bold text-center mb-8">Animated Inset Transitions</h2>
         
         <div className="flex justify-center mb-8">
-          <button
-            onClick={() => setIsAnimated(!isAnimated)}
-            className="px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
-          >
+          <Button onClick={() => setIsAnimated(!isAnimated)}>
             {isAnimated ? "Expand" : "Contract"}
-          </button>
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function PolygonFanDemo() {
   const [isFanned, setIsFanned] = useState(false);
@@ -28,12 +29,9 @@ export function PolygonFanDemo() {
         <h2 className="text-3xl font-bold text-center mb-8">Fan-Shaped Polygon Animation</h2>
         
         <div className="flex justify-center mb-8">
-          <button
-            onClick={() => setIsFanned(!isFanned)}
-            className="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
-          >
+          <Button onClick={() => setIsFanned(!isFanned)}>
             {isFanned ? "Close Fan" : "Open Fan"}
-          </button>
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

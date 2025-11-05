@@ -20,7 +20,7 @@ const advancedDemos = [
 
 export default function AdvancedIndexPage() {
   return (
-    <div className="min-h-screen p-8 bg-gradient-to-br from-rose-50 to-orange-50">
+    <div className="min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
           <Link href="/blend-modes" className="text-rose-600 hover:underline mb-4 inline-block">

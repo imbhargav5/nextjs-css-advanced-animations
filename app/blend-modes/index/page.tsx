@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function BlendModesIndexPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 to-gray-100">
+    <div className="flex min-h-screen items-center justify-center">
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-16 px-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">

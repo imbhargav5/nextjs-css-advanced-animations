@@ -15,7 +15,7 @@ const basicDemos = [
 
 export default function BasicIndexPage() {
   return (
-    <div className="min-h-screen p-8 bg-gradient-to-br from-purple-50 to-pink-50">
+    <div className="min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
           <Link href="/blend-modes" className="text-purple-600 hover:underline mb-4 inline-block">

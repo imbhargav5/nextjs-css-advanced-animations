@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function PolygonMorphingDemo() {
   const [isMorphed, setIsMorphed] = useState(false);
@@ -11,12 +12,9 @@ export function PolygonMorphingDemo() {
         <h2 className="text-3xl font-bold text-center mb-8">Polygon Shape Morphing</h2>
         
         <div className="flex justify-center mb-8">
-          <button
-            onClick={() => setIsMorphed(!isMorphed)}
-            className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-          >
+          <Button onClick={() => setIsMorphed(!isMorphed)}>
             {isMorphed ? "Morph to Triangle" : "Morph to Star"}
-          </button>
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

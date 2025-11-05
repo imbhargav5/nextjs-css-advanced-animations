@@ -20,7 +20,7 @@ const intermediateDemos = [
 
 export default function IntermediateIndexPage() {
   return (
-    <div className="min-h-screen p-8 bg-gradient-to-br from-pink-50 to-rose-50">
+    <div className="min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
           <Link href="/blend-modes" className="text-pink-600 hover:underline mb-4 inline-block">

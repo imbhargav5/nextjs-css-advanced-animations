@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export function ClipWithTransformsDemo() {
   const [rotate, setRotate] = useState(0);
@@ -12,27 +13,21 @@ export function ClipWithTransformsDemo() {
         <h2 className="text-3xl font-bold text-center mb-8">Clip-Path with Transforms</h2>
         
         <div className="flex gap-4 justify-center mb-8 flex-wrap">
-          <button
-            onClick={() => setRotate((r) => r + 45)}
-            className="px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
-          >
+          <Button onClick={() => setRotate((r) => r + 45)}>
             Rotate 45°
-          </button>
-          <button
-            onClick={() => setScale((s) => s === 1 ? 1.2 : 1)}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
+          </Button>
+          <Button onClick={() => setScale((s) => s === 1 ? 1.2 : 1)}>
             Toggle Scale
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => {
               setRotate(0);
               setScale(1);
             }}
-            className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            variant="outline"
           >
             Reset
-          </button>
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

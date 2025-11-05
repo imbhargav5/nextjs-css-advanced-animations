@@ -13,6 +13,12 @@ const sections = [
     description: "Explore CSS blend modes examples from basic effects to advanced compositions",
     icon: "🎨",
   },
+  {
+    name: "Backdrop Filter",
+    href: "/backdrop-filter",
+    description: "Explore CSS backdrop-filter examples from basic effects to advanced compositions",
+    icon: "✨",
+  },
 ];
 
 export default function Home() {

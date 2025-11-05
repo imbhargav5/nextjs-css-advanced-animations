@@ -27,7 +27,7 @@ interface DemoPageLayoutProps {
   technicalDetails: string;
   category: "basic" | "intermediate" | "advanced";
   demoNumber: number;
-  section?: "clip-path" | "blend-modes";
+  section?: "clip-path" | "blend-modes" | "backdrop-filter";
 }
 
 export function DemoPageLayout({
