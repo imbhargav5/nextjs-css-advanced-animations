@@ -3,14 +3,20 @@
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
   SidebarInset,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
   SidebarProvider,
+  SidebarSeparator,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Github } from "lucide-react";
 import Link from "next/link";
 
 interface DemoPageLayoutProps {
@@ -83,6 +89,23 @@ export function DemoPageLayout({
               </SidebarGroupContent>
             </SidebarGroup>
           </SidebarContent>
+          <SidebarSeparator />
+          <SidebarFooter>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild tooltip="View on GitHub">
+                  <Link
+                    href="https://github.com/imbhargav5/nextjs-css-advanced-animations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="size-4" />
+                    <span>Found a bug or want to contribute? Check out the GitHub repo</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarFooter>
         </Sidebar>
         <SidebarInset>
           <div className="p-4">
