@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DemoBlock } from "@/components/demo-block";
 
 const blendModes = [
   "normal",
@@ -24,11 +25,20 @@ export function InteractiveBlendEditorDemo() {
   const [opacity, setOpacity] = useState(100);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
-      <div className="max-w-4xl w-full space-y-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Interactive Blend Editor</h2>
-        
-        <div className="bg-white p-6 rounded-lg shadow-lg space-y-4">
+    <div className="max-w-6xl mx-auto space-y-8">
+      <h2 className="text-3xl font-bold mb-8">Interactive Blend Editor</h2>
+
+      <DemoBlock
+        title="Interactive Controls"
+        code={`const [baseColor, setBaseColor] = useState("#3b82f6");
+const [blendColor, setBlendColor] = useState("#fbbf24");
+const [blendMode, setBlendMode] = useState("multiply");
+const [opacity, setOpacity] = useState(100);
+
+// Color pickers, blend mode selector, and opacity slider
+// Adjust all parameters in real-time`}
+      >
+        <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold mb-2">Base Color</label>
@@ -75,34 +85,59 @@ export function InteractiveBlendEditorDemo() {
             </div>
           </div>
         </div>
+      </DemoBlock>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Preview */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Preview</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div
-                className="relative w-full h-64 rounded"
-                style={{ backgroundColor: baseColor }}
-              >
-                <div
-                  className="absolute inset-0 rounded"
-                  style={{
-                    backgroundColor: blendColor,
-                    mixBlendMode: blendMode,
-                    opacity: opacity / 100,
-                  }}
-                />
-              </div>
-            </div>
+      <DemoBlock
+        title="Live Preview"
+        code={`<div className="relative w-full h-64 rounded"
+     style={{ backgroundColor: baseColor }}>
+  <div
+    className="absolute inset-0 rounded"
+    style={{
+      backgroundColor: blendColor,
+      mixBlendMode: blendMode,
+      opacity: opacity / 100,
+    }}
+  />
+</div>
+
+/* Real-time visual feedback */
+/* Adjust controls above to see changes */`}
+      >
+        <div className="flex justify-center">
+          <div
+            className="relative w-full max-w-md h-64 rounded"
+            style={{ backgroundColor: baseColor }}
+          >
+            <div
+              className="absolute inset-0 rounded"
+              style={{
+                backgroundColor: blendColor,
+                mixBlendMode: blendMode,
+                opacity: opacity / 100,
+              }}
+            />
           </div>
+        </div>
+      </DemoBlock>
 
-          {/* Code output */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Code Output</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <pre className="bg-gray-100 p-4 rounded overflow-x-auto text-sm">
-                <code>{`.base {
+      <DemoBlock
+        title="Generated CSS Code"
+        code={`.base {
+  background-color: ${baseColor};
+}
+
+.blend {
+  background-color: ${blendColor};
+  mix-blend-mode: ${blendMode};
+  opacity: ${opacity / 100};
+}
+
+/* Copy this code for your project */`}
+      >
+        <div className="flex justify-center">
+          <pre className="bg-muted p-4 rounded overflow-x-auto text-sm w-full max-w-md">
+            <code>{`.base {
   background-color: ${baseColor};
 }
 
@@ -111,11 +146,9 @@ export function InteractiveBlendEditorDemo() {
   mix-blend-mode: ${blendMode};
   opacity: ${opacity / 100};
 }`}</code>
-              </pre>
-            </div>
-          </div>
+          </pre>
         </div>
-      </div>
+      </DemoBlock>
     </div>
   );
 }

@@ -1,77 +1,97 @@
 "use client";
 
+import { DemoBlock } from "@/components/demo-block";
+
 export function InsetRectangleDemo() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
-      <div className="max-w-4xl w-full space-y-8">
-        <h2 className="text-3xl font-bold text-center mb-8">Inset Rectangle Clip</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Example 1: Basic inset */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Basic Inset</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div
-                className="w-full h-64 bg-gradient-to-br from-purple-400 to-blue-500"
-                style={{
-                  clipPath: "inset(20%)",
-                }}
-              />
-            </div>
-          </div>
+    <div className="max-w-6xl mx-auto space-y-8">
+      <h2 className="text-3xl font-bold mb-8">Inset Rectangle Clip</h2>
 
-          {/* Example 2: Different inset values */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Top/Bottom Inset</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div
-                className="w-full h-64 bg-gradient-to-br from-pink-400 to-rose-500"
-                style={{
-                  clipPath: "inset(10% 0% 10% 0%)",
-                }}
-              />
-            </div>
-          </div>
+      <DemoBlock
+        title="Basic Inset"
+        code={`<div
+  className="w-full h-64 bg-gradient-to-br from-purple-400 to-blue-500"
+  style={{
+    clipPath: "inset(20%)"
+  }}
+/>
 
-          {/* Example 3: Left/Right inset */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Left/Right Inset</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div
-                className="w-full h-64 bg-gradient-to-br from-green-400 to-emerald-500"
-                style={{
-                  clipPath: "inset(0% 15% 0% 15%)",
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Example 4: All sides different */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Asymmetric Inset</h3>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div
-                className="w-full h-64 bg-gradient-to-br from-orange-400 to-amber-500"
-                style={{
-                  clipPath: "inset(5% 20% 15% 10%)",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold mb-4">Code Example</h3>
-          <pre className="bg-gray-100 p-4 rounded overflow-x-auto">
-            <code>{`clip-path: inset(20%);
 /* Shorthand: all sides */
-clip-path: inset(10% 0% 10% 0%);
-/* Syntax: inset(top right bottom left) */
-/* Creates inner rectangle */`}</code>
-          </pre>
+/* Creates an inner rectangle by clipping from all edges */`}
+      >
+        <div className="flex justify-center">
+          <div
+            className="w-64 h-64 bg-gradient-to-br from-purple-400 to-blue-500"
+            style={{
+              clipPath: "inset(20%)",
+            }}
+          />
         </div>
-      </div>
+      </DemoBlock>
+
+      <DemoBlock
+        title="Top/Bottom Inset"
+        code={`<div
+  className="w-full h-64 bg-gradient-to-br from-pink-400 to-rose-500"
+  style={{
+    clipPath: "inset(10% 0% 10% 0%)"
+  }}
+/>
+
+/* Syntax: inset(top right bottom left) */
+/* Clips only from top and bottom */`}
+      >
+        <div className="flex justify-center">
+          <div
+            className="w-64 h-64 bg-gradient-to-br from-pink-400 to-rose-500"
+            style={{
+              clipPath: "inset(10% 0% 10% 0%)",
+            }}
+          />
+        </div>
+      </DemoBlock>
+
+      <DemoBlock
+        title="Left/Right Inset"
+        code={`<div
+  className="w-full h-64 bg-gradient-to-br from-green-400 to-emerald-500"
+  style={{
+    clipPath: "inset(0% 15% 0% 15%)"
+  }}
+/>
+
+/* Clips only from left and right sides */`}
+      >
+        <div className="flex justify-center">
+          <div
+            className="w-64 h-64 bg-gradient-to-br from-green-400 to-emerald-500"
+            style={{
+              clipPath: "inset(0% 15% 0% 15%)",
+            }}
+          />
+        </div>
+      </DemoBlock>
+
+      <DemoBlock
+        title="Asymmetric Inset"
+        code={`<div
+  className="w-full h-64 bg-gradient-to-br from-orange-400 to-amber-500"
+  style={{
+    clipPath: "inset(5% 20% 15% 10%)"
+  }}
+/>
+
+/* All sides different: top=5%, right=20%, bottom=15%, left=10% */`}
+      >
+        <div className="flex justify-center">
+          <div
+            className="w-64 h-64 bg-gradient-to-br from-orange-400 to-amber-500"
+            style={{
+              clipPath: "inset(5% 20% 15% 10%)",
+            }}
+          />
+        </div>
+      </DemoBlock>
     </div>
   );
 }
-
