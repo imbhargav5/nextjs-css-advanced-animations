@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blend Modes Examples",
+  description: "Explore 40 diverse examples of CSS blend modes, from basic effects to advanced compositions and interactions.",
+};
 
 export default function BlendModesIndexPage() {
   return (

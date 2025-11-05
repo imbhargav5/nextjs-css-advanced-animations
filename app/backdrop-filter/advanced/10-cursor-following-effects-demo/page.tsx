@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { CursorFollowingEffectsDemo } from "./10-cursor-following-effects";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Cursor Following Effects",
+  description: "Create interactive cursor-following effects using backdrop-filter that respond to mouse movement.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

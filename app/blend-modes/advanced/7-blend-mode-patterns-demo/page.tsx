@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { BlendModePatternsDemo } from "./7-blend-mode-patterns";
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode Patterns",
+  description: "Learn how to combine blend modes with repeating patterns to create texture and visual interest.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

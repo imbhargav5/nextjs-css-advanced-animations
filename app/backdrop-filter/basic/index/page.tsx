@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Basic Examples",
+  description: "Learn the fundamentals of backdrop-filter with blur, brightness, contrast, and more.",
+  category: "backdrop-filter",
+  level: "basic",
+});
 
 const basicDemos = [
   { number: 1, slug: "1-simple-blur-demo", title: "Simple Blur" },

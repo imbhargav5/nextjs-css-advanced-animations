@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ComplexFilterCompositionsDemo } from "./12-complex-filter-compositions";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Complex Filter Compositions",
+  description: "Create complex compositions with multiple coordinated backdrop-filter elements.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

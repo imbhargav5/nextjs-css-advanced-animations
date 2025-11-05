@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { PolygonMorphingDemo } from "./2-polygon-morphing";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Polygon Morphing",
+  description: "Morph between different polygon shapes smoothly. Requires matching point counts for smooth transitions.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

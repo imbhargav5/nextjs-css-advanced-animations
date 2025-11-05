@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Advanced Examples",
+  description: "Master advanced techniques with these 15 examples covering complex animations, interactions, and cutting-edge effects.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 const advancedDemos = [
   { number: 1, slug: "1-complex-svg-animation-demo", title: "Complex SVG Animation" },

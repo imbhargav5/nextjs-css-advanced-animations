@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { DrawingRevealDemo } from "./10-drawing-reveal";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Drawing Reveal Effect",
+  description: "Progressively reveal shapes as if they're being drawn. Create animated drawing effects.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

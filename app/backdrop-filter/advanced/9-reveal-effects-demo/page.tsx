@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { RevealEffectsDemo } from "./9-reveal-effects";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Reveal Effects",
+  description: "Create animated reveal effects using backdrop-filter transitions.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

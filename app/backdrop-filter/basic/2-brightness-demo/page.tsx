@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BrightnessDemo } from "./2-brightness";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Brightness",
+  description: "Learn how backdrop-filter brightness adjusts the brightness of the background behind an element.",
+  category: "backdrop-filter",
+  level: "basic",
+});
 
 export default function Page() {
   return (

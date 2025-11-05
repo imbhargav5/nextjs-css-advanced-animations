@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { Perspective3DEffectsDemo } from "./4-3d-perspective-effects";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "3D Perspective Effects",
+  description: "Combine backdrop-filter with CSS 3D transforms to create perspective effects.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

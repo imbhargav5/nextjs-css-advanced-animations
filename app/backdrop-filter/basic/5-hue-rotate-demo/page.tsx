@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { HueRotateDemo } from "./5-hue-rotate";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Hue Rotate",
+  description: "Learn how backdrop-filter hue-rotate shifts the hue of colors in the background behind an element.",
+  category: "backdrop-filter",
+  level: "basic",
+});
 
 export default function Page() {
   return (

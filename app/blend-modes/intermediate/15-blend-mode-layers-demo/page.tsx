@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BlendModeLayersDemo } from "./15-blend-mode-layers";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode Layers",
+  description: "Learn how to stack multiple layers with different blend modes to create complex visual compositions.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

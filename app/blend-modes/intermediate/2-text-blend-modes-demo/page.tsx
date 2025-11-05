@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { TextBlendModesDemo } from "./2-text-blend-modes";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Text Blend Modes",
+  description: "Learn how to apply blend modes to text, creating interesting color interactions with backgrounds.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

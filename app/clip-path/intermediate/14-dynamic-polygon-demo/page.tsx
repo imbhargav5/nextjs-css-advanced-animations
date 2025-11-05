@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { DynamicPolygonDemo } from "./14-dynamic-polygon";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Dynamic Polygon Generation",
+  description: "Generate polygons dynamically with JavaScript. Change the number of sides and watch the shape update.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { TextClippingDemo } from "./9-text-clipping";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Text Clipping",
+  description: "Clip text content with shapes. Create text that follows custom shapes.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

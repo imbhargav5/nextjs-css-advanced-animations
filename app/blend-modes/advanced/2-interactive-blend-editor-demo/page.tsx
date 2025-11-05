@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { InteractiveBlendEditorDemo } from "./2-interactive-blend-editor";
+export const metadata: Metadata = generateMetadata({
+  title: "Interactive Blend Editor",
+  description: "Learn how to create an interactive editor for experimenting with blend modes, colors, and opacity.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { ScrollTriggeredBlendDemo } from "./10-scroll-triggered-blend";
+export const metadata: Metadata = generateMetadata({
+  title: "Scroll Triggered Blend",
+  description: "Learn how to change blend modes dynamically based on scroll position for engaging scroll effects.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

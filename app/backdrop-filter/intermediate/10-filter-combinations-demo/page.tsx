@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { FilterCombinationsDemo } from "./10-filter-combinations";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Filter Combinations",
+  description: "Explore combining multiple backdrop-filter functions for rich visual effects.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

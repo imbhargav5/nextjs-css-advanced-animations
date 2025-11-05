@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { GradientBlendModesDemo } from "./5-gradient-blend-modes";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Gradient Blend Modes",
+  description: "Learn how to blend gradients together using different blend modes to create complex color effects.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

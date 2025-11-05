@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ParallaxClippingDemo } from "./12-parallax-clipping";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Parallax Clipping",
+  description: "Create parallax scrolling effects using clip-path. Different scroll speeds create depth.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

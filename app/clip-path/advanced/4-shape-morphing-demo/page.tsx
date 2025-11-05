@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ShapeMorphingDemo } from "./4-shape-morphing";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Shape Morphing",
+  description: "Morph between multiple complex shapes in sequence. Combine with transforms for advanced effects.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

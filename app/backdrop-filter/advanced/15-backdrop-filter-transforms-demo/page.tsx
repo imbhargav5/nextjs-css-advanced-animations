@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BackdropFilterTransformsDemo } from "./15-backdrop-filter-transforms";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Backdrop Filter Transforms",
+  description: "Combine backdrop-filter with CSS transforms to create dynamic visual effects.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

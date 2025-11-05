@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { SepiaDemo } from "./9-sepia";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Sepia",
+  description: "Learn how backdrop-filter sepia applies a vintage sepia tone effect to the background behind an element.",
+  category: "backdrop-filter",
+  level: "basic",
+});
 
 export default function Page() {
   return (

@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { Blend3DEffectsDemo } from "./4-3d-blend-effects";
+export const metadata: Metadata = generateMetadata({
+  title: "3D Blend Effects",
+  description: "Learn how to combine blend modes with 3D transforms to create depth and dimension.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

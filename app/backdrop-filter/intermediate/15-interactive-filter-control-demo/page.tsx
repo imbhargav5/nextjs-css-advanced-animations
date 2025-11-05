@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { InteractiveFilterControlDemo } from "./15-interactive-filter-control";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Interactive Filter Control",
+  description: "Create interactive controls to adjust backdrop-filter values in real-time.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

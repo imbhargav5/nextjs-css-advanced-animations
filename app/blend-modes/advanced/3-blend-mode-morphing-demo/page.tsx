@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { BlendModeMorphingDemo } from "./3-blend-mode-morphing";
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode Morphing",
+  description: "Learn how to create smooth morphing effects between different blend modes using opacity transitions.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { GradientBackdropDemo } from "./12-gradient-backdrop";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Gradient Backdrop",
+  description: "Apply backdrop-filter effects to gradient backgrounds for rich visual compositions.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

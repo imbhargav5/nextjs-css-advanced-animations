@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ComplexMultiLayerBlurDemo } from "./1-complex-multi-layer-blur";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Complex Multi-Layer Blur",
+  description: "Create complex compositions with multiple layered elements using different backdrop-filter blur values.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

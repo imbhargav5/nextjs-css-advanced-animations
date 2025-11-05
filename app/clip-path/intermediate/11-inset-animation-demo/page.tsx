@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { InsetAnimationDemo } from "./11-inset-animation";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Inset Animation",
+  description: "Animate inset values to create expanding and contracting frame effects.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Basic Examples",
+  description: "Learn the fundamentals of CSS clip-path with these 10 basic examples.",
+  category: "clip-path",
+  level: "basic",
+});
 
 const basicDemos = [
   { number: 1, slug: "1-simple-circle-clip-demo", title: "Simple Circle Clip" },

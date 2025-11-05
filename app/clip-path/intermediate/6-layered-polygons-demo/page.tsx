@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { LayeredPolygonsDemo } from "./6-layered-polygons";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Layered Polygons",
+  description: "Layer multiple elements with different clip-paths. Use opacity to create depth and complexity.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

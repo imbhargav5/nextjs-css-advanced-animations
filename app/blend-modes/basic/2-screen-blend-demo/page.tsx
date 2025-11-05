@@ -1,4 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Screen Blend",
+  description: "Learn about screen blend mode, which lightens the base color by inverting, multiplying, and inverting again.",
+  category: "blend-modes",
+  level: "basic",
+});
+
 import { ScreenBlendDemo } from "./2-screen-blend";
 
 export default function Page() {

@@ -1,4 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Color Burn Blend",
+  description: "Learn about color burn blend mode, which darkens the base color by inverting, dividing, and inverting again.",
+  category: "blend-modes",
+  level: "basic",
+});
+
 import { ColorBurnBlendDemo } from "./7-color-burn";
 
 export default function Page() {

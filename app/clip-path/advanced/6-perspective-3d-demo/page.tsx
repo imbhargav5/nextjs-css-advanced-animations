@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { Perspective3dDemo } from "./6-perspective-3d";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "3D Perspective Effects",
+  description: "Combine clip-path with 3D transforms and perspective. Create depth and dimension.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

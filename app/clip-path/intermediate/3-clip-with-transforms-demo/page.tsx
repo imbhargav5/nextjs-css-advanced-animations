@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ClipWithTransformsDemo } from "./3-clip-with-transforms";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Clip-Path with Transforms",
+  description: "Combine clip-path with CSS transforms. Transform affects the clipped element, creating interesting 3D effects.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

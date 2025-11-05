@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { SidebarWithBlurDemo } from "./9-sidebar-with-blur";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Sidebar with Blur",
+  description: "Create glassmorphism sidebars with backdrop-filter blur effects.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

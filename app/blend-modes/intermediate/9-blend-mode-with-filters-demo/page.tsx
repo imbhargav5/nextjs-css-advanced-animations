@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BlendModeWithFiltersDemo } from "./9-blend-mode-with-filters";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode with Filters",
+  description: "Learn how to combine blend modes with CSS filters to create unique visual effects.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

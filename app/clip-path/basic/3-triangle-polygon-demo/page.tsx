@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { TrianglePolygonDemo } from "./3-triangle-polygon";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Triangle Polygon",
+  description: "Create triangular shapes using polygon() function. Learn how to define points and create various triangle orientations.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

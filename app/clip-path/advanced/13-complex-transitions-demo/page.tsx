@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ComplexTransitionsDemo } from "./13-complex-transitions";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Complex Transition Sequences",
+  description: "Sequence multiple clip-path transitions with delays and different timing functions.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

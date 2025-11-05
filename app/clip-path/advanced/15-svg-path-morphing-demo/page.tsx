@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { SvgPathMorphingDemo } from "./15-svg-path-morphing";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "SVG Path Morphing",
+  description: "Morph between complex SVG paths dynamically. Create fluid shape transitions.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

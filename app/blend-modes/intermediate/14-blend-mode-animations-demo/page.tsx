@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BlendModeAnimationsDemo } from "./14-blend-mode-animations";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode Animations",
+  description: "Learn how to animate blend modes using keyframe animations and transforms for dynamic effects.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

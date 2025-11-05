@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { MaskRevealDemo } from "./13-mask-reveal";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Mask Reveal Effect",
+  description: "Use clip-path as a mask to progressively reveal content. Control reveal progress with sliders or animations.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

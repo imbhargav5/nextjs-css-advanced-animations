@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { ComplexBlendCompositionsDemo } from "./12-complex-blend-compositions";
+export const metadata: Metadata = generateMetadata({
+  title: "Complex Blend Compositions",
+  description: "Learn how to create sophisticated multi-layer compositions using various blend modes and isolation groups.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

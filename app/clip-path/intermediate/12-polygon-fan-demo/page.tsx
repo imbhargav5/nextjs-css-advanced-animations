@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { PolygonFanDemo } from "./12-polygon-fan";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Polygon Fan Animation",
+  description: "Create fan-shaped polygons that open and close. Use JavaScript to generate polygon points dynamically.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

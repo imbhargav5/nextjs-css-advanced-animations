@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { BlendModeTransformsDemo } from "./15-blend-mode-transforms";
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode Transforms",
+  description: "Learn how to combine blend modes with CSS transforms (rotate, scale, skew) for dynamic animated effects.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

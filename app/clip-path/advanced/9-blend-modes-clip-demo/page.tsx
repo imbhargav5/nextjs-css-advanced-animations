@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BlendModesClipDemo } from "./9-blend-modes-clip";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Modes with Clip-Path",
+  description: "Combine clip-path with CSS blend modes for interesting color interactions and effects.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

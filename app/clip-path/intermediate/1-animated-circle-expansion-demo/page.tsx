@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { AnimatedCircleExpansionDemo } from "./1-animated-circle-expansion";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Animated Circle Expansion",
+  description: "Animate circle clip-path using state and transitions. Create expanding and contracting effects.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

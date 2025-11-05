@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ResponsivePolygonDemo } from "./4-responsive-polygon";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Responsive Polygon",
+  description: "Create responsive clip-paths using calc() and viewport units. Adapt shapes to different screen sizes.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

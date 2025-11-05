@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { HoverRevealDemo } from "./7-hover-reveal";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Hover Reveal",
+  description: "Create interactive hover effects using clip-path transitions. Reveal content with smooth animations.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

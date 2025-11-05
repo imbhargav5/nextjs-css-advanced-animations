@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { BackdropFilterWithSVGDemo } from "./8-backdrop-filter-with-svg";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Backdrop Filter with SVG",
+  description: "Combine backdrop-filter with SVG backgrounds and masks for complex visual effects.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

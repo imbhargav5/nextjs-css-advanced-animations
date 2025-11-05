@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { IsolatedBlendGroupsDemo } from "./8-isolated-blend-groups";
+export const metadata: Metadata = generateMetadata({
+  title: "Isolated Blend Groups",
+  description: "Learn about the isolation property, which creates new stacking contexts and controls blend mode scope.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

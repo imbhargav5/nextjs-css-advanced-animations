@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { InvertDemo } from "./6-invert";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Invert",
+  description: "Learn how backdrop-filter invert inverts the colors of the background behind an element.",
+  category: "backdrop-filter",
+  level: "basic",
+});
 
 export default function Page() {
   return (

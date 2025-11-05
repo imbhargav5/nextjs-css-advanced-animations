@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ContrastDemo } from "./3-contrast";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Contrast",
+  description: "Learn how backdrop-filter contrast adjusts the contrast of the background behind an element.",
+  category: "backdrop-filter",
+  level: "basic",
+});
 
 export default function Page() {
   return (

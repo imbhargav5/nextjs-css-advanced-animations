@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { HexagonPolygonDemo } from "./6-hexagon-polygon";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Hexagon Polygon",
+  description: "Create hexagonal shapes using polygon with six points. Learn how to calculate and position hexagon vertices.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

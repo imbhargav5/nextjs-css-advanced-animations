@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { SimpleCircleClipDemo } from "./1-simple-circle-clip";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Simple Circle Clip",
+  description: "Learn the basics of clipping elements with circular shapes. This demo shows how to use circle() function with different sizes and positions.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

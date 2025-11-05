@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { MultipleCirclesDemo } from "./5-multiple-circles";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Multiple Circles",
+  description: "Combine multiple clip-path shapes using comma separation. Create complex patterns by overlapping shapes.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

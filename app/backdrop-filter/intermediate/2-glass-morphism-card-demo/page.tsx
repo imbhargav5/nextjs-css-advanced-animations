@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { GlassMorphismCardDemo } from "./2-glass-morphism-card";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Glass Morphism Card",
+  description: "Create beautiful glassmorphism cards using backdrop-filter blur and transparency effects.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

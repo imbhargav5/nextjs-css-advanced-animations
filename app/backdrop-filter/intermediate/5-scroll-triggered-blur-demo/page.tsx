@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ScrollTriggeredBlurDemo } from "./5-scroll-triggered-blur";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Scroll-Triggered Blur",
+  description: "Create dynamic backdrop-filter blur effects that respond to scroll position.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

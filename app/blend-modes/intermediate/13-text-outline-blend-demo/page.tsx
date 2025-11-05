@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { TextOutlineBlendDemo } from "./13-text-outline-blend";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Text Outline Blend",
+  description: "Learn how to create text outline effects using blend modes with transparent text and stroke.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

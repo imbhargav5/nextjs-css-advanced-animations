@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Intermediate Examples",
+  description: "Explore animations, interactions, and practical backdrop-filter applications with these 15 examples.",
+  category: "backdrop-filter",
+  level: "intermediate",
+});
 
 const intermediateDemos = [
   { number: 1, slug: "1-animated-blur-transitions-demo", title: "Animated Blur Transitions" },

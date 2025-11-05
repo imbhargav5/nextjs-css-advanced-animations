@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { SvgPathClipDemo } from "./7-svg-path-clip";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "SVG Path Clip",
+  description: "Use SVG path syntax for complex custom shapes. Create any shape you can imagine with path commands.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

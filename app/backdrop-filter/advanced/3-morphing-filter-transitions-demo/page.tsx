@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { MorphingFilterTransitionsDemo } from "./3-morphing-filter-transitions";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Morphing Filter Transitions",
+  description: "Create smooth morphing transitions between different backdrop-filter states.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

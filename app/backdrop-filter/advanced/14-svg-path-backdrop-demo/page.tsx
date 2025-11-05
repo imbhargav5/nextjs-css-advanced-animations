@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { SVGPathBackdropDemo } from "./14-svg-path-backdrop";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "SVG Path Backdrop",
+  description: "Combine backdrop-filter with SVG paths and clip-path for animated and shaped blur effects.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

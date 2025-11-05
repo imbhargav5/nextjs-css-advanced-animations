@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { BlendModeWithSVGDemo } from "./8-blend-mode-with-svg";
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode with SVG",
+  description: "Learn how to apply blend modes to SVG elements, creating complex shape-based blending effects.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

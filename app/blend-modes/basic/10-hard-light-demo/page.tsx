@@ -1,4 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Hard Light Blend",
+  description: "Learn about hard light blend mode, which is similar to overlay but uses the blend color as the reference point.",
+  category: "blend-modes",
+  level: "basic",
+});
+
 import { HardLightBlendDemo } from "./10-hard-light";
 
 export default function Page() {

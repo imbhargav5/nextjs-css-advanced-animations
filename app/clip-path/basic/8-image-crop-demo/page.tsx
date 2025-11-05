@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ImageCropDemo } from "./8-image-crop";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Image Crop",
+  description: "Use clip-path to crop images into various shapes without image editing software. Non-destructive image cropping.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

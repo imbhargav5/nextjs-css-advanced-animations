@@ -1,4 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Lighten Blend",
+  description: "Learn about lighten blend mode, which selects the lighter of the base and blend colors.",
+  category: "blend-modes",
+  level: "basic",
+});
+
 import { LightenBlendDemo } from "./5-lighten-blend";
 
 export default function Page() {

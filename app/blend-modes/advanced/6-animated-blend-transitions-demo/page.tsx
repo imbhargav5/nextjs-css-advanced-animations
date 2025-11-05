@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { AnimatedBlendTransitionsDemo } from "./6-animated-blend-transitions";
+export const metadata: Metadata = generateMetadata({
+  title: "Animated Blend Transitions",
+  description: "Learn how to create complex animated transitions combining blend modes with transforms, opacity, and filters.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

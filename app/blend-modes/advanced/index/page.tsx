@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Advanced Examples",
+  description: "Master complex compositions, 3D effects, and cutting-edge blend mode techniques with these 15 examples.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 const advancedDemos = [
   { number: 1, slug: "1-complex-multi-layer-blend-demo", title: "Complex Multi-Layer Blend" },

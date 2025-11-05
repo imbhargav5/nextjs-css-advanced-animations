@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clip-Path Examples",
+  description: "Explore 40 diverse examples of CSS clip-path, from basic shapes to advanced animations and interactions.",
+};
 
 export default function ClipPathIndexPage() {
   return (

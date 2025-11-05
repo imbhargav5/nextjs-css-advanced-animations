@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { BackgroundBlendModeDemo } from "./7-background-blend-mode";
+export const metadata: Metadata = generateMetadata({
+  title: "Background Blend Mode",
+  description: "Learn about background-blend-mode, which blends multiple background layers together.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

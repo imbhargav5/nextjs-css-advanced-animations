@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { ImageOverlayBlendDemo } from "./1-image-overlay-blend";
+export const metadata: Metadata = generateMetadata({
+  title: "Image Overlay Blend",
+  description: "Learn how to apply blend modes to images, creating overlays and color effects.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

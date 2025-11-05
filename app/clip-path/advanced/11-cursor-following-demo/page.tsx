@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { CursorFollowingDemo } from "./11-cursor-following";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Cursor Following",
+  description: "Make clip-path follow the mouse cursor. Create interactive, cursor-responsive effects.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

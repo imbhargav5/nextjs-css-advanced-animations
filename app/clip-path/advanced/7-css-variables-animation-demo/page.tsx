@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { CssVariablesAnimationDemo } from "./7-css-variables-animation";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "CSS Variables Animation",
+  description: "Use CSS custom properties to animate clip-path values. Create dynamic, themeable animations.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

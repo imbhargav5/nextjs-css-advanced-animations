@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { InsetRectangleDemo } from "./4-inset-rectangle";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Inset Rectangle",
+  description: "Use inset() to create inner rectangles by clipping from the edges. Perfect for creating frames and borders.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

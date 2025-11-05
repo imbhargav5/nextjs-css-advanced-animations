@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ScrollRevealAnimationDemo } from "./3-scroll-reveal-animation";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Advanced Scroll Reveal",
+  description: "Complex scroll-based reveal animations with multiple stages and parallax effects.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

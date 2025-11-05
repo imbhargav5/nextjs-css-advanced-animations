@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { BlendModeRevealEffectsDemo } from "./9-blend-mode-reveal-effects";
+export const metadata: Metadata = generateMetadata({
+  title: "Blend Mode Reveal Effects",
+  description: "Learn how to create reveal animations using blend modes combined with clip-path, transforms, and opacity.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

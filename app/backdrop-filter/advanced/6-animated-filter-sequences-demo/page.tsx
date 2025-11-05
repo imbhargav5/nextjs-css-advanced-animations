@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { AnimatedFilterSequencesDemo } from "./6-animated-filter-sequences";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Animated Filter Sequences",
+  description: "Create animated sequences that automatically cycle through different backdrop-filter states.",
+  category: "backdrop-filter",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

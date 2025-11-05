@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Intermediate Examples",
+  description: "Explore intermediate techniques with these 15 examples covering animations, interactions, and complex shapes.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 const intermediateDemos = [
   { number: 1, slug: "1-animated-circle-expansion-demo", title: "Animated Circle Expansion" },

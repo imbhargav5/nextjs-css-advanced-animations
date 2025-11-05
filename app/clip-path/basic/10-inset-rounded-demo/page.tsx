@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { InsetRoundedDemo } from "./10-inset-rounded";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Inset with Rounded Corners",
+  description: "Combine inset() with rounded corners using the 'round' keyword. Create frames with rounded inner corners.",
+  category: "clip-path",
+  level: "basic",
+});
 
 export default function Page() {
   return (

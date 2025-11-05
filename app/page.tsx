@@ -1,4 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Explore diverse CSS techniques and examples organized by category including clip-path, blend modes, and backdrop-filter effects.",
+};
 
 const sections = [
   {

@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Intermediate Examples",
+  description: "Explore animations, interactions, and more complex blend mode techniques with these 15 examples.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 const intermediateDemos = [
   { number: 1, slug: "1-image-overlay-blend-demo", title: "Image Overlay Blend" },

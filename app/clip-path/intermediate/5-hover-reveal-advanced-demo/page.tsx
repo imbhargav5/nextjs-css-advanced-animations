@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { HoverRevealAdvancedDemo } from "./5-hover-reveal-advanced";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Advanced Hover Reveal",
+  description: "Multi-stage hover reveals with complex animations. Create sophisticated reveal effects.",
+  category: "clip-path",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (

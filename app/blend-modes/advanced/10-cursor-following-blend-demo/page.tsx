@@ -1,5 +1,13 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 import { CursorFollowingBlendDemo } from "./10-cursor-following-blend";
+export const metadata: Metadata = generateMetadata({
+  title: "Cursor Following Blend",
+  description: "Learn how to create interactive blend effects that follow the mouse cursor for engaging user interactions.",
+  category: "blend-modes",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

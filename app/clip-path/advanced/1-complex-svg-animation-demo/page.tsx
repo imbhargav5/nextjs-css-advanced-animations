@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { ComplexSvgAnimationDemo } from "./1-complex-svg-animation";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Complex SVG Animation",
+  description: "Animate complex SVG paths with JavaScript. Create dynamic wave patterns and complex shapes.",
+  category: "clip-path",
+  level: "advanced",
+});
 
 export default function Page() {
   return (

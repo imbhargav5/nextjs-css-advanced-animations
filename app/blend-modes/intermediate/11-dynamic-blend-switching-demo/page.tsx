@@ -1,5 +1,14 @@
 import { DemoPageLayout } from "@/components/demo-page-layout";
 import { DynamicBlendSwitchingDemo } from "./11-dynamic-blend-switching";
+import { generateMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = generateMetadata({
+  title: "Dynamic Blend Switching",
+  description: "Learn how to dynamically switch between blend modes using React state for interactive effects.",
+  category: "blend-modes",
+  level: "intermediate",
+});
 
 export default function Page() {
   return (
