@@ -7,7 +7,12 @@ const sections = [
     description: "Explore CSS clip-path examples from basic shapes to advanced animations",
     icon: "✂️",
   },
-  // Add more sections here in the future
+  {
+    name: "Blend Modes",
+    href: "/blend-modes",
+    description: "Explore CSS blend modes examples from basic effects to advanced compositions",
+    icon: "🎨",
+  },
 ];
 
 export default function Home() {

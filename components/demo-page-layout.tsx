@@ -27,6 +27,7 @@ interface DemoPageLayoutProps {
   technicalDetails: string;
   category: "basic" | "intermediate" | "advanced";
   demoNumber: number;
+  section?: "clip-path" | "blend-modes";
 }
 
 export function DemoPageLayout({
@@ -37,9 +38,10 @@ export function DemoPageLayout({
   technicalDetails,
   category,
   demoNumber,
+  section = "clip-path",
 }: DemoPageLayoutProps) {
   const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
-  const categoryPath = `/clip-path/${category}`;
+  const categoryPath = `/${section}/${category}`;
 
   return (
     <SidebarProvider defaultOpen={false}>
