@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -29,34 +31,39 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 to-gray-100">
+    <div className="flex min-h-screen items-center justify-center">
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-16 px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-12 space-y-4">
+          <h1 className="text-5xl font-bold">
             CSS Examples Showcase
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore diverse CSS techniques and examples organized by category.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
           {sections.map((section) => (
-            <Link
-              key={section.name}
-              href={section.href}
-              className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-blue-400"
-            >
-              <div className="text-center">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                  {section.icon}
-                </div>
-                <h2 className="text-2xl font-semibold mb-2 text-gray-800">{section.name}</h2>
-                <p className="text-gray-600 mb-4">{section.description}</p>
-                <div className="text-blue-600 font-semibold group-hover:underline">
-                  View Section →
-                </div>
-              </div>
+            <Link key={section.name} href={section.href} className="group">
+              <Card className="h-full transition-all hover:shadow-lg">
+                <CardHeader className="text-center">
+                  <div className="text-5xl mb-2 group-hover:scale-110 transition-transform">
+                    {section.icon}
+                  </div>
+                  <CardTitle className="text-2xl">{section.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    {section.description}
+                  </CardDescription>
+                </CardContent>
+                <CardFooter className="justify-center">
+                  <span className="text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                    View Section
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </CardFooter>
+              </Card>
             </Link>
           ))}
         </div>
